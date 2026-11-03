@@ -1,0 +1,34 @@
+
+/* Brand design tokens */
+:root {
+  --color-forest: #12382c;
+  --color-forest-dark: #0e2c23;
+  --color-cream: #f7f1e5;
+  --color-gold: #bf974b;
+  --color-text: #20362b;
+  --color-muted: #63776b;
+
+  --font-heading: 'Cinzel', Georgia, serif;
+  --font-body: 'DM Sans', Arial, sans-serif;
+}
+
+/* Global base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-cream);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}

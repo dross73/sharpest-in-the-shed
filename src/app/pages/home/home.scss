@@ -1,0 +1,17 @@
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 3rem;
+  min-height: 640px;
+  padding: 4rem 5%;
+  background-color: var(--color-forest-dark);
+  color: var(--color-cream);
+}
+
+.hero__artwork img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
