@@ -75,6 +75,7 @@
 
   &--primary {
     background-color: var(--color-gold);
+    color: var(--color-forest-dark);
   }
 
   &--secondary {
@@ -88,8 +89,44 @@
   }
 }
 
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  padding: 3rem 5%;
+  background-color: var(--color-cream);
+  color: var(--color-text);
+}
+
+.benefits__heading {
+  grid-column: 1 / -1;
+  margin: 0 0 1rem;
+  color: var(--color-forest);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.benefits__item {
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--color-gold);
+
+  h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.125rem;
+  }
+
+  p {
+    margin: 0;
+    color: var(--color-muted);
+    line-height: 1.6;
+  }
+}
+
 @media (max-width: 30rem) {
-  .hero__action {
+  .hero__actions {
     flex-direction: column;
   }
 
@@ -105,4 +142,11 @@
     gap: 2rem;
     padding: 3rem 1.5rem;
   }
+
+  .benefits {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 1.5rem;
+  }
+
 }

@@ -1,0 +1,119 @@
+.site-header {
+  background-color: var(--color-cream);
+}
+
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1440px;
+  min-height: 6rem;
+  margin-inline: auto;
+  padding: 1rem 5%;
+}
+
+.site-header__brand {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-forest);
+  text-decoration: none;
+}
+
+.site-header__name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.site-header__tagline {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.site-header__links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: auto;
+
+  a {
+    color: var(--color-text);
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+
+.site-header__cta {
+  padding: 0.875rem 1.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-forest);
+  color: var(--color-cream);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-header__menu-toggle {
+  display: none;
+}
+
+.site-header__brand:focus-visible,
+.site-header__links a:focus-visible,
+.site-header__cta:focus-visible,
+.site-header__menu-toggle:focus-visible {
+  outline: 3px solid var(--color-forest);
+  outline-offset: 4px;
+}
+
+@media (max-width: 64rem) {
+  .site-header__nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .site-header__brand {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .site-header__name {
+    font-size: 1rem;
+  }
+
+  .site-header__tagline {
+    font-size: 0.5rem;
+    letter-spacing: 0.04em;
+  }
+
+  .site-header__menu-toggle {
+    display: block;
+    margin-left: auto;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-forest);
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: var(--color-forest);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .site-header__links {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    flex-basis: 100%;
+    gap: 1rem;
+    margin-left: 0;
+
+    &.is-open {
+      display: flex;
+    }
+  }
+
+  .site-header__cta {
+    display: none;
+  }
+}

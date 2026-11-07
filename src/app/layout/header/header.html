@@ -1,0 +1,28 @@
+<header class="site-header">
+  <nav class="site-header__nav" aria-label="Primary navigation">
+    <a class="site-header__brand" href="/">
+      <span class="site-header__name"> Sharpest in the Shed </span>
+      <span class="site-header__tagline"> Professional Knife Sharpening </span>
+    </a>
+
+    <button
+      type="button"
+      class="site-header__menu-toggle"
+      aria-label="Toggle navigation"
+      aria-controls="primary-navigation"
+      [attr.aria-expanded]="menuOpen()"
+      (click)="toggleMenu()"
+    >
+      Menu
+    </button>
+
+    <div id="primary-navigation" class="site-header__links" [class.is-open]="menuOpen()">
+      <a href="/#services" (click)="closeMenu()">Services</a>
+      <a href="/#how-it-works" (click)="closeMenu()">How It Works</a>
+      <a href="/#about" (click)="closeMenu()">About</a>
+      <a href="/#contact" (click)="closeMenu()">Contact</a>
+    </div>
+
+    <a class="site-header__cta" href="/#contact"> Get in Touch </a>
+  </nav>
+</header>
